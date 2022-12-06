@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hyperdrive": "^9.16.0",
+    "hyperspace": "^3.19.0"
+  }
 }
