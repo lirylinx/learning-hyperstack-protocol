@@ -11,6 +11,8 @@ async function main() {
 
     // esperar o estado interno esteja carregado
     await core.ready();
+    await c.replicate(core);
+
     console.log('Chave public: ' + core.key.toString('hex')); 
     
     setInterval(() => {
