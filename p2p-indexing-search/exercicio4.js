@@ -13,6 +13,7 @@ async function main(keyStr) {
 
     core.on('append',  async function () {
         // novo bloco de dados foi adicionado
+        console.log('bloco #' + (core.length - 1))
         console.log( await core.get(core.length - 1));
 
     });
