@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "hyperspace": "^3.19.0"
+    "hyperspace": "^3.19.0",
+    "process-top": "^1.2.0"
   }
 }
