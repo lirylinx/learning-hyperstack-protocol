@@ -4,16 +4,17 @@ const stats = require('process-top')(); // instanciar como coletor de estatistic
 main();
 
 async function main() {
-    const c = new Client();
-    const store = c.corestore();
+    const { corestore, replicate } = new Client();
+    const store = corestore();
 
     const core = store.get({name: 'stats-colletor', valueEncoding: 'json'});
 
     // esperar o estado interno esteja carregado
     await core.ready();
-    await c.replicate(core);
-
     console.log('Chave public: ' + core.key.toString('hex')); 
+
+    await replicate(core);
+
     
     setInterval(() => {
         
@@ -22,7 +23,7 @@ async function main() {
 
     core.on('append',  async function () {
         // novo bloco de dados foi adicionado
-        console.log( await core.get(core.length - 1));
+        console.log('bloco #' + (core.length - 1).toString())
 
     });
 }
