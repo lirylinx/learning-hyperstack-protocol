@@ -8,8 +8,8 @@ const TARGET = new Date(Date.now() - (60 * 1e2));
 
 
 // Alternar o comportamento da busca com algoritmo diferentes
-const PREFETCH = true;
-const NAIVE_MODE = false;
+const PREFETCH = false;
+const NAIVE_MODE = true;
 
 start();
 
