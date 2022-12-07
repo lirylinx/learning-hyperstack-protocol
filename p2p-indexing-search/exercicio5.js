@@ -1,6 +1,6 @@
 const { Client } = require('hyperspace');
 
- main('ece8bf4002d73b395a28c7d624e68ec5c33aa057bb1c3c4fe6cbda750b090174');
+ main('3d82710ebcec2c475f5ee0cea6e77f390c7c11906bf27dd44bfa24679843ab19');
 
 async function main(keyStr) {
     const {corestore, replicate } = new Client();
@@ -14,12 +14,17 @@ async function main(keyStr) {
 
   
       // Print the last block from the stats core.
-  const lastBlock = await core.get(core.length - 1)
-  console.log(lastBlock)
 
-    // core.on('append',  async function () {
-    //     // novo bloco de dados foi adicionado
-    //     console.log( await core.get(core.length - 1));
 
-    // });
+
+    core.on('download',  async function () {
+      console.log('event')
+
+      const lastBlock = await core.get(core.length - 1)
+      console.log(lastBlock)
+    });
+
+    // core.download();
+    const lastBlock = await core.get(5)
+    console.log(lastBlock)
 }
