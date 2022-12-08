@@ -1,0 +1,25 @@
+{
+  "name": "p2p-autobase",
+  "version": "1.0.0",
+  "description": "Workshop de p2p multiwrite usando autobase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "p2p",
+    "autobase",
+    "hypercore",
+    "hyperstack"
+  ],
+  
+  "dependencies": {
+    "hyperbee": "^2.2.0",
+    "hyperspace": "^3.19.0",
+    "lexicographic-integer": "^1.1.0",
+    "process-top": "^1.2.0",
+    "websters-english-dictionary": "^2.0.0"
+  },
+  "author": "dercio g.c guirruta",
+  "license": "ISC"
+}
