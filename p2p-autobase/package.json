@@ -12,14 +12,15 @@
     "hypercore",
     "hyperstack"
   ],
-  
   "dependencies": {
+    "@hyperswarm/dht": "^5.0.25",
     "hyperbee": "^2.2.0",
     "hyperspace": "^3.19.0",
     "lexicographic-integer": "^1.1.0",
     "process-top": "^1.2.0",
     "websters-english-dictionary": "^2.0.0"
   },
+  "type": "module",
   "author": "dercio g.c guirruta",
   "license": "ISC"
 }
