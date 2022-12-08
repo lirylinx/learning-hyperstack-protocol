@@ -21,3 +21,4 @@ await swarm.flush();
 // Certificar-se de que ha comprimento mais recente
 
 console.log('Core length eh ', core.length);
+console.log('Core bloco 1453 eh ', (await core.get(1453)).toString());
