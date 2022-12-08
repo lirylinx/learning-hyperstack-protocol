@@ -1,23 +1,39 @@
+const { Client } = require('hyperspace');
+const Hyperbee = require('hyperbee');
 
-const { Client } = require('hyperspace')
-const Hyperbee = require('hyperbee')
 
-start()
+const listData = [
+    { key: 'foo', value: 'foo-value' },
+{ key: 'bar', value: 'bar-value' },
+{ key: 'baz', value: 'baz-value' },
+]
 
-async function start () {
-  const { corestore, replicate } = new Client()
-  const store = corestore()
+start();
 
-  const core = store.get({ name: 'hyperbee-exercise' })
-  
-  // Create a new Hyperbee database with String keys/values.
-  const db = new Hyperbee(core, { keyEncoding: 'utf-8', valueEncoding: 'utf-8' })
+async function start() {
 
-  await db.put('foo', 'foo-value')
-  await db.put('bar', 'bar-value')
-  await db.put('baz', 'baz-value')
+    const { corestore, replicate } = new Client();
 
-  const { value } = await db.get('baz')
-  // This should be 'baz-value'. Same idea for the other keys.
-  console.log('baz value:', value)
-}
+    const store = corestore();
+    const core = store.get({name: 'hyperbee-exercicio'});
+    const db = new Hyperbee(core, {keyEncoding: 'utf-8', valueEncoding: 'utf-8'});
+
+    // for ( data of listData ) {
+    //   const rv=   await insertData(data.key, data.value);
+    await db.put(listData[0].key, listData[0].value);
+    
+    const { value } = await db.get(data.key);
+
+      console.log('Inserido: %s', value);
+    }
+
+
+    // async function insertData(key, val) {
+    //     await db.put(key, val)
+    
+    //     const { value } = await db.get(key);
+    //     return value;
+    // }
+
+
+
