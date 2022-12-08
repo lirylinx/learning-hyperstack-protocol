@@ -20,8 +20,12 @@ swarm.on('connection', function ( encrypedSocket){
     encrypedSocket.on('close', function () {
         console.log('Peer remoto desconectado')
     });
+
+    process.stdin.pipe(encrypedSocket).pipe(process.stdout);
 });
 
+
+//  Tópicos são apenas identificadores para encontrar outros pares na rede
 const topico = crypto.createHash('sha256').update('topico').digest();
 swarm.join(topico);
 
