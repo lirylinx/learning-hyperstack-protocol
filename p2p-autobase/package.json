@@ -16,6 +16,7 @@
     "@hyperswarm/dht": "^5.0.25",
     "hyperbee": "^2.2.0",
     "hyperspace": "^3.19.0",
+    "hyperswarm": "^3.0.4",
     "lexicographic-integer": "^1.1.0",
     "process-top": "^1.2.0",
     "websters-english-dictionary": "^2.0.0"
