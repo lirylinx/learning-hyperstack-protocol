@@ -1,3 +1,6 @@
 simpleapp/node_modules
 p2p-indexing-search/node_modules
 p2p-autobase/node_modules
+p2p-autobase/peer-store
+p2p-autobase/seed-store
+p2p-autobase/store
