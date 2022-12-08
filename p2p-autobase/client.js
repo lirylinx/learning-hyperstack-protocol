@@ -1,7 +1,7 @@
 import DHT from '@hyperswarm/dht'
 
 const node = new DHT();
-const keyStr = '0b55d0f54e17a583b30f9ff85ec6e912c4ce6f2177202b1d7c4f23411e97617b';
+const keyStr = '218951da7ad4caeed7f63d7b7717661ac5377b123135ebccb8bfcd41d4040296';
 const remotePublicKey = Buffer.from(keyStr, 'hex');
 const encrypedSocket = node.connect(remotePublicKey);
 
