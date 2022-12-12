@@ -14,12 +14,15 @@
   ],
   "dependencies": {
     "@hyperswarm/dht": "^5.0.25",
+    "autobase": "^1.0.0-alpha.8",
+    "chalk": "^5.1.2",
     "corestore": "^6.0.2",
     "hyperbee": "^2.2.0",
     "hyperspace": "^3.19.0",
     "hyperswarm": "^3.0.4",
     "lexicographic-integer": "^1.1.0",
     "process-top": "^1.2.0",
+    "random-access-memory": "^6.1.0",
     "websters-english-dictionary": "^2.0.0"
   },
   "type": "module",
