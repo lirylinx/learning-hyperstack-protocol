@@ -55,17 +55,35 @@ await baseB.append('B4: mensagem b4', [])
 await baseB.append('B5: mensagem b5', []) 
 await baseB.append('B6: mensagem b6', []) 
 await baseB.append('B7: looks like we\'re both online!')
+await baseA.append('A5: mensagem A5', []) 
 await baseB.append('B8: mensagem b8', []) 
 
-await baseA.append('A5: mensagem A5', []) 
+
 
 
 for await (const node of baseA.createCausalStream()) {
     console.log(node.value.toString());
 }
 
-console.log("________________ Node B __________________");
+// console.log("________________ Node B __________________");
 
-for await (const node of baseB.createCausalStream()) {
+// for await (const node of baseB.createCausalStream()) {
+//     console.log(node.value.toString());
+// }
+
+
+
+const viewCore = store.get({name: 'view-core'});
+const view = baseA.linearize(viewCore)
+console.log(view.status);
+
+await view.update();
+
+
+
+// O bloco no indice 0 é o cabeçalho do bloco, então pula-se
+
+for (let i = 0; i < view.length; i++) {
+    const node = await view.get(i);
     console.log(node.value.toString());
 }
