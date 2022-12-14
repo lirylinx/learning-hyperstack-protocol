@@ -4,3 +4,6 @@ p2p-autobase/node_modules
 p2p-autobase/peer-store
 p2p-autobase/seed-store
 p2p-autobase/store
+kappadb/node_modules
+kappadb/single-chat-feed
+p2p-autobase/hypernews
