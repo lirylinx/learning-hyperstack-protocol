@@ -1,6 +1,6 @@
 const Hyperswarm = require('hyperswarm');
 const swarm = new Hyperswarm();
-const topico = Buffer.from('a49766a23610999dc5dfe05bc37cd98a9911d4b46bd25fc2cd037b9669a1e214', 'hex');
+const topico = Buffer.from('4ccc861b918304f41083997311c9cd639ba646fe1af1592658927f6606cf1a30', 'hex');
 
 // Entrar na rede usando uma chave ou topico
 
